@@ -49,3 +49,21 @@ kubectl get deployments
 
 check the pods using 
  kubectl get pods
+
+2. auto scaling :
+
+By running this command it will auto scale it 
+
+kubectl autoscale deployment myporject --max 6 --min 1 procpu-percent 60 - here my deployment name is my project
+
+3. CI/CD pipeline
+
+ a. i used github to store the code
+ b. by using docker i am building the images 
+ c. storing the image in the container registry
+ d. running it as as deployment in kubernetes
+ 
+ 4. store secretes.
+
+Here i used secretes separtely to pass the credential to the gcr to that we can access the images . 
+Please refer secrets.yml and i am applying the same in deployment.yaml
