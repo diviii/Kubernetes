@@ -67,3 +67,6 @@ kubectl autoscale deployment myporject --max 6 --min 1 procpu-percent 60 - here 
 
 Here i used secretes separtely to pass the credential to the gcr to that we can access the images . 
 Please refer secrets.yml and i am applying the same in deployment.yaml
+
+kubectl create secret generic user --from-literal=backend-username='admin'
+ and assigned the secrets in the deployment.yaml
