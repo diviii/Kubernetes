@@ -12,6 +12,12 @@ apiVersion: extensions/v1beta1
 	      containers:
 	      - name: hello-world-pod
 	        image: gcr.io/myproject/app:v1
+		env:
+		- name: SECRET_USERNAME
+		valueFrom:
+                   secretKeyRef:
+                     name: user
+                     key: admin
 	        ports: 
 	        - containerPort: 80
 	        - containerPort: 443
