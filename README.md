@@ -25,4 +25,17 @@ Kubectl get nodes
 
 Now we can use docker file ,sample code and deployment.yaml file 
 
-git clone 
+#clone the code 
+git clone https://github.com/diviii/Kubernetes.git
+
+cd kubernetes
+
+#get credentials to google contaienr registry
+
+gcloud auth configure-docker
+
+#build and push  the docker image 
+
+docker build -t gcr.io/[PROJECT_ID]/app:v1 .
+docker push gcr.io/[PROJECT_ID]/app:v1
+
