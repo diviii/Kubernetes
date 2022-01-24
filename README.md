@@ -36,6 +36,6 @@ gcloud auth configure-docker
 
 #build and push  the docker image 
 
-docker build -t gcr.io/[PROJECT_ID]/app:v1 .
-docker push gcr.io/[PROJECT_ID]/app:v1
+docker build -t gcr.io/[PROJECT_ID]/app:v1 . - build the code from the current directory and we get the hellow world image
+docker push gcr.io/[PROJECT_ID]/app:v1 - pushing the image to the hellor world
 
