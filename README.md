@@ -39,3 +39,13 @@ gcloud auth configure-docker
 docker build -t gcr.io/[PROJECT_ID]/app:v1 . - build the code from the current directory and we get the hellow world image
 docker push gcr.io/[PROJECT_ID]/app:v1 - pushing the image to the hellor world
 
+Now we can create the deployment yaml and service using 
+
+kubectl apply -f deployment.yaml --record
+
+check the deployments using 
+
+kubectl get deployments
+
+check the pods using 
+ kubectl get pods
