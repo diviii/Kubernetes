@@ -70,3 +70,17 @@ Please refer secrets.yml and i am applying the same in deployment.yaml
 
 kubectl create secret generic user --from-literal=backend-username='admin'
  and assigned the secrets in the deployment.yaml
+
+5. Auto scaler :
+
+As we have mentioned replicas and it will watch the pod and autoscale it based on the traffic  . please refer the deployment.yaml
+
+6. certificates :
+
+create a certificate using certificate manager
+
+kubectl create namespace cert-manager
+
+kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.13.1/cert-manager.yaml
+
+kubectl apply -f https://github.com/divii/kubernetes/51440e2ed212991655959f45d8d037cc/raw/7b16949f95e2dd61e522e247749d77bc697fd63c/selfsigned-issuer.yaml
